@@ -26,11 +26,7 @@ Update prettier config
 ```
 
 [prettier]: https://github.com/prettier/prettier
-
 [cspell]: https://cspell.org/
-
 [license]: https://github.com/sjwall/prettier-plugin-cspell/blob/main/LICENSE
-
 [npm]: https://www.npmjs.com/package/prettier-plugin-cspell
-
 [pr]: http://makeapullrequest.com

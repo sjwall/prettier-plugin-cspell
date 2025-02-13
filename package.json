@@ -7,10 +7,6 @@
     "plugin",
     "cspell"
   ],
-  "files":[
-    "dist",
-    "src"
-  ],
   "homepage": "https://github.com/sjwall/prettier-plugin-cspell#readme",
   "bugs": {
     "url": "https://github.com/sjwall/prettier-plugin-cspell/issues"
@@ -24,6 +20,10 @@
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "build": "rimraf ./dist && vite build && tsc",
     "lint:cspell": "cspell \"**\"",
