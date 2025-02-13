@@ -1,0 +1,52 @@
+{
+  "name": "prettier-plugin-cspell",
+  "version": "0.1.0",
+  "description": "Prettier CSpell plugin to make the order of properties nice.",
+  "keywords": [
+    "prettier",
+    "plugin",
+    "cspell"
+  ],
+  "files":[
+    "dist",
+    "src"
+  ],
+  "homepage": "https://github.com/sjwall/prettier-plugin-cspell#readme",
+  "bugs": {
+    "url": "https://github.com/sjwall/prettier-plugin-cspell/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sjwall/prettier-plugin-cspell.git"
+  },
+  "license": "MIT",
+  "author": "Samuel Wall <oss@samuelwall.co.uk>",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "rimraf ./dist && vite build && tsc",
+    "lint:cspell": "cspell \"**\"",
+    "lint:prettier": "prettier . --write",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cspell-lib": "^8.17.3",
+    "glob": "11.0.1",
+    "ignore": "7.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.2",
+    "cspell": "^8.17.3",
+    "prettier": "^3.5.1",
+    "prettier-plugin-packagejson": "^2.5.8",
+    "rimraf": "^6.0.1",
+    "typescript": "5.5.4",
+    "vite": "^6.1.0",
+    "vite-plugin-node-externals": "^0.0.1"
+  },
+  "peerDependencies": {
+    "prettier": "^3"
+  },
+  "packageManager": "yarn@4.6.0"
+}

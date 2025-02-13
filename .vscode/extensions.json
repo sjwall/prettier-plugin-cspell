@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "eamodio.gitlens",
+    "streetsidesoftware.code-spell-checker-cspell-bundled-dictionaries",
+    "esbenp.prettier-vscode"
+  ]
+}
