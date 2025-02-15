@@ -21,7 +21,7 @@ export function formatConfig(config: CSpellSettings) {
   config.userWords = formatWords(config.userWords)
   config.words = formatWords(config.words)
 
-  return Object.keys(config)
+  return (Object.keys(config) as (keyof CSpellSettings)[])
     .sort(sortConfigKeys)
     .reduce<CSpellSettings>((result, key) => {
       ;(result as Record<string, any>)[key] = (config as Record<string, any>)[

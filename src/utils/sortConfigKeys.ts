@@ -1,17 +1,40 @@
-const defaultOrder = [
+import type {CSpellSettings} from 'cspell-lib'
+
+const defaultOrder: (keyof CSpellSettings)[] = [
   '$schema',
   'version',
+  'id',
+  'name',
+  'description',
+  'enabled',
   'import',
   'language',
   'languageSettings',
   'languageId',
-  'loadDefaultConfiguration',
-  'noConfigSearch',
+  'enabledLanguageIds',
+  'allowCompoundWords',
+  'caseSensitive',
+  'enableFiletypes',
   'failFast',
+  'loadDefaultConfiguration',
+  'maxDuplicateProblems',
+  'maxNumberOfProblems',
+  'minRandomLength',
+  'minWordLength',
+  'numSuggestions',
+  'noConfigSearch',
+  'parser',
+  'patterns',
+  'validateDirectives',
+  'pnpFiles',
+  'usePnP',
   'files',
   'globRoot',
   'enableGlobDot',
   'ignorePaths',
+  'ignoreRandomStrings',
+  'ignoreRegExpList',
+  'ignoreWords',
   'useGitignore',
   'gitignoreRoot',
   'reporters',
@@ -20,10 +43,16 @@ const defaultOrder = [
   'overrides',
   'dictionaryDefinitions',
   'dictionaries',
+  'noSuggestDictionaries',
   'userWords',
+  'words',
+  'flagWords',
 ]
 
-export function sortConfigKeys(a: string, b: string): number {
+export function sortConfigKeys(
+  a: keyof CSpellSettings,
+  b: keyof CSpellSettings,
+): number {
   const indexA = defaultOrder.indexOf(a) + 1
   const indexB = defaultOrder.indexOf(b) + 1
 
