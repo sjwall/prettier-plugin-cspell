@@ -1,11 +1,11 @@
----
-$schema: https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json
+$schema: >-
+  https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json
 version: '0.2'
 useGitignore: true
 dictionaryDefinitions:
-  - name: project-words
-    path: './project-words.txt'
-    addWords: true
+  - addWords: true
+    name: project-words
+    path: ./project-words.txt
 dictionaries:
   - bash
   - companies

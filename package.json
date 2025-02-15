@@ -33,9 +33,11 @@
   "dependencies": {
     "cspell-lib": "^8.17.3",
     "glob": "11.0.1",
-    "ignore": "7.0.3"
+    "ignore": "7.0.3",
+    "js-yaml": "^4.1.0"
   },
   "devDependencies": {
+    "@types/js-yaml": "^4",
     "@types/node": "^22.13.2",
     "cspell": "^8.17.3",
     "prettier": "^3.5.1",
