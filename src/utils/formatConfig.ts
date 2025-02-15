@@ -1,7 +1,8 @@
 import {CSpellSettings} from 'cspell-lib'
 import {formatWords} from './formatWords'
+import {sortConfigKeys} from './sortConfigKeys'
 
-export function formatConfig(config: CSpellSettings, sortKeys = true) {
+export function formatConfig(config: CSpellSettings) {
   if (config.readonly) {
     return config
   }
@@ -20,12 +21,12 @@ export function formatConfig(config: CSpellSettings, sortKeys = true) {
   config.userWords = formatWords(config.userWords)
   config.words = formatWords(config.words)
 
-  return sortKeys ? Object.keys(config)
-    .sort()
+  return Object.keys(config)
+    .sort(sortConfigKeys)
     .reduce<CSpellSettings>((result, key) => {
       ;(result as Record<string, any>)[key] = (config as Record<string, any>)[
         key
       ]
       return result
-    }, {}) : config
+    }, {})
 }
