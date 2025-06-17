@@ -4,7 +4,7 @@ import type {SupportLanguage} from 'prettier'
 
 const cspellSettings = await searchForConfig(process.cwd())
 const dictionaryDefinitions =
-  cspellSettings!.dictionaryDefinitions
+  cspellSettings?.dictionaryDefinitions
     ?.map((v) => v.file ?? v.path)
     .filter(Boolean)
     .map((v) => relative(process.cwd(), v!)) ?? []
