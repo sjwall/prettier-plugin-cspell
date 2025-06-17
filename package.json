@@ -1,6 +1,6 @@
 {
   "name": "prettier-plugin-cspell",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Prettier CSpell plugin to make the order of properties nice.",
   "keywords": [
     "prettier",
