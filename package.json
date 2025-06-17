@@ -25,7 +25,7 @@
     "src"
   ],
   "scripts": {
-    "build": "rimraf ./dist && vite build && tsc",
+    "prepare": "rimraf ./dist && vite build && tsc",
     "lint:cspell": "cspell \"**\"",
     "lint:prettier": "prettier . --write",
     "test": "echo \"Error: no test specified\" && exit 1"
